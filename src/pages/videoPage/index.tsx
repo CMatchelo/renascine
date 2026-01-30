@@ -2,6 +2,7 @@ import { useParams, Navigate, useNavigate } from "react-router-dom";
 import { videoPages } from "../../data/videoPages";
 import { useEffect } from "react";
 import { NavigateBtn } from "../../components/navigateBtn";
+import { VideoEmbed } from "../../components/videoEmbeded";
 
 export default function VideoPage() {
   const { slug } = useParams<{ slug: string }>();
@@ -29,16 +30,8 @@ export default function VideoPage() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {page.videos.map((video, index) => (
-          <div className="flex flex-col">
-            <iframe
-              loading="lazy"
-              key={index}
-              src={video.link}
-              className="w-full aspect-video rounded-lg"
-              allowFullScreen
-              allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerPolicy="strict-origin-when-cross-origin"
-            />
+          <div key={index} className="flex flex-col">
+            <VideoEmbed url={video.link} title={video.title} />
             <h3 className="text-md font-bold mt-4">{video.title}</h3>
             <h4 className="text-sm">{video.subTitle}</h4>
             <span className="text-xs text-gray-500 mb-4">{video.role}</span>
@@ -52,7 +45,3 @@ export default function VideoPage() {
     </section>
   );
 }
-
-/*
-<iframe width="479" height="271" src="https://www.youtube.com/embed/VHwIq8jC45s" title="ADIDAS - TRIONDA FEST" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-*/
