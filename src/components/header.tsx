@@ -14,10 +14,10 @@ export default function Header() {
         </Link>
         <span className="text-white">renascine@gmail.com</span>
       </div>
-      <div className="m-auto w-2/5 flex flex-col items-center">
+      <div className="m-auto w-10/12 md:w-2/5 flex flex-col items-center">
         <img src="./renasLogo.png" />
         {!slug && (
-          <span className="text-red-500">
+          <span className="text-red-500 text-xs md:text-md">
             film editor | editor assist. | color grading
           </span>
         )}

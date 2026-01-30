@@ -40,19 +40,19 @@ export const videoPages: VideoPagesMap = {
         role: 'Editing/Color'
       },
       {
-        link: 'https://www.youtube.com/embed/7bppwuSw6T4',
+        link: 'https://www.youtube.com/embed/B_TghNLBr8A',
         title: 'ATVOS',
         subTitle: 'MIT Rallies 2025',
         role: 'Editing/Color'
       },
       {
-        link: 'https://www.youtube.com/embed/lV82_eTnoWg',
+        link: 'https://www.youtube.com/embed/PsN2_JK4Z3E',
         title: 'SADIA',
         subTitle: 'Lollapalooza 2025',
         role: 'Editing'
       },
       {
-        link: 'https://www.youtube.com/embed/kOjUOEbiz5w',
+        link: 'https://www.youtube.com/embed/0Cz4DiYQglc',
         title: 'Adidas',
         subTitle: 'Bootcamp 2025',
         role: 'Editing/Color'
