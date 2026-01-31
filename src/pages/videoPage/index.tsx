@@ -1,4 +1,4 @@
-import { useParams, Navigate, useNavigate } from "react-router-dom";
+import { useParams, Navigate } from "react-router-dom";
 import { videoPages } from "../../data/videoPages";
 import { useEffect } from "react";
 import { NavigateBtn } from "../../components/navigateBtn";
@@ -6,7 +6,6 @@ import { VideoEmbed } from "../../components/videoEmbeded";
 
 export default function VideoPage() {
   const { slug } = useParams<{ slug: string }>();
-  const navigate = useNavigate();
 
   const slugs = Object.keys(videoPages);
   const currentIndex = slug ? slugs.indexOf(slug) : -1;
@@ -25,7 +24,7 @@ export default function VideoPage() {
   const prevSlug = slugs[(currentIndex - 1 + slugs.length) % slugs.length];
 
   return (
-    <section className="max-w-6xl mx-auto p-6">
+    <main className="max-w-6xl mx-auto p-6">
       <h2 className="text-3xl text-red-500 mb-6">{page.title}</h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -39,9 +38,9 @@ export default function VideoPage() {
         ))}
       </div>
       <div className="flex justify-center gap-4">
-        <NavigateBtn linkTo={prevSlug} btnText="← Previous" />
-        <NavigateBtn linkTo={nextSlug} btnText="Next →" />
+        <NavigateBtn linkTo={prevSlug} btnText="← Previous" ariaLabel="Go to previous video category" />
+        <NavigateBtn linkTo={nextSlug} btnText="Next →" ariaLabel="Go to next video category" />
       </div>
-    </section>
+    </main>
   );
 }

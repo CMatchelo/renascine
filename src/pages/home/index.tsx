@@ -5,22 +5,31 @@ export default function Home() {
     <section className="flex flex-col items-center pb-10">
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 py-4">
         <ProjectCard
+          ariaLabel="Go to Brand Content category"
           title="Brand Content"
           coverUrl="./brandContentCover.png"
           linkTo="/brandContent"
         />
         <ProjectCard
+          ariaLabel="Go to Brand Activation category"
           title="Brand Activation"
           coverUrl="./brandActivationCover.png"
           linkTo="/brandActivation"
         />
         <ProjectCard
+          ariaLabel="Go to Episodic category"
           title="Episodic"
           coverUrl="./episodicCover.png"
           linkTo="/episodic"
         />
-        <ProjectCard title="Docs" coverUrl="./docsCover.png" linkTo="/docs" />
         <ProjectCard
+          ariaLabel="Go to Docs category"
+          title="Docs"
+          coverUrl="./docsCover.png"
+          linkTo="/docs"
+        />
+        <ProjectCard
+          ariaLabel="Go to Music category"
           title="Music"
           coverUrl="./musicCover.png"
           linkTo="/music"

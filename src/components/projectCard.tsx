@@ -4,11 +4,13 @@ interface ProjectCardProps {
   title: string;
   coverUrl: string;
   linkTo: string;
+  ariaLabel: string;
 }
 
-export const ProjectCard = ({ title, coverUrl, linkTo }: ProjectCardProps) => {
+export const ProjectCard = ({ title, coverUrl, linkTo, ariaLabel }: ProjectCardProps) => {
   return (
     <Link
+      aria-label={ariaLabel}
       to={linkTo}
       style={{ backgroundImage: `url(${coverUrl})` }}
       className={`flex-1 group relative h-120 rounded-4xl overflow-hidden cursor-pointer
