@@ -36,7 +36,7 @@ export default function Home() {
         />
       </div>
       <div className="w-full md:w-1/2 flex flex-col gap-4">
-        <span className="text-xs">
+        <span className="text-xs md:text-sm">
           Formado em Cinema em 2017, me chamo Renato Bertoni. Trabalho entre a
           edição, a assistência e color grading, lidando com tempo, ritmo e
           respiração das imagens. Há quase 10 anos, acompanho projetos do
