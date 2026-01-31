@@ -3,7 +3,7 @@ import { ProjectCard } from "../../components/projectCard";
 export default function Home() {
   return (
     <section className="flex flex-col items-center pb-10">
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 py-4">
+      <div className="w-full grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 py-4">
         <ProjectCard
           ariaLabel="Go to Brand Content category"
           title="Brand Content"

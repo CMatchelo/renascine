@@ -19,7 +19,7 @@ export const ProjectCard = ({ title, coverUrl, linkTo, ariaLabel }: ProjectCardP
       hover:grayscale-0`}
     >
       <span
-        className="block mt-10 font-bold text-3xl text-left px-4 tracking-[-1px] text-white
+        className="block mt-10 font-bold text-3xl lg:text-[2.8vw] leading-tight text-left px-4 tracking-[-1px] text-white
         transform transition-transform duration-300 group-hover:scale-110"
       >
         {title}
