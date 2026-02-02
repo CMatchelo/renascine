@@ -3,7 +3,7 @@ import "./App.css";
 import Layout from "./components/layout";
 import Home from "./pages/home";
 import VideoPage from "./pages/videoPage";
-import AdminVideos from "./pages/AdminVideos";
+import AdminVideos from "./pages/adminVideos";
 
 function App() {
   return (
