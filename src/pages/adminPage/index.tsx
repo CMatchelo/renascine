@@ -13,7 +13,7 @@ type Category =
   | "docs"
   | "music";
 
-export default function AdminVideos() {
+export default function AdminPage() {
   const { videos } = useVideos() as { videos: VideoItem[] };
   const { registerVideo, deleteVideo } = useVideosActions();
 
