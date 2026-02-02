@@ -1,11 +1,22 @@
 import { useParams, Navigate } from "react-router-dom";
 import { videoPages } from "../../data/videoPages";
-import { useEffect } from "react";
+import { useEffect, useMemo } from "react";
 import { NavigateBtn } from "../../components/navigateBtn";
 import { VideoEmbed } from "../../components/videoEmbeded";
+import { useVideos } from "../../contexts/VideosContext";
+import type { VideoItem } from "../../types/video";
 
 export default function VideoPage() {
+  const { videos } = useVideos() as { videos: VideoItem[] };
   const { slug } = useParams<{ slug: string }>();
+
+  const filteredVideos = useMemo(() => {
+    if (!slug) return [];
+
+    return videos.filter((video) => video.category === slug);
+  }, [videos, slug]);
+
+  console.log(videos);
 
   const slugs = Object.keys(videoPages);
   const currentIndex = slug ? slugs.indexOf(slug) : -1;
@@ -28,7 +39,7 @@ export default function VideoPage() {
       <h2 className="text-3xl text-red-500 mb-6">{page.title}</h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        {page.videos.map((video, index) => (
+        {filteredVideos.map((video, index) => (
           <div key={index} className="flex flex-col">
             <VideoEmbed url={video.link} title={video.title} />
             <h3 className="text-md font-bold mt-4">{video.title}</h3>
@@ -38,8 +49,16 @@ export default function VideoPage() {
         ))}
       </div>
       <div className="flex justify-center gap-4">
-        <NavigateBtn linkTo={prevSlug} btnText="← Previous" ariaLabel="Go to previous video category" />
-        <NavigateBtn linkTo={nextSlug} btnText="Next →" ariaLabel="Go to next video category" />
+        <NavigateBtn
+          linkTo={prevSlug}
+          btnText="← Previous"
+          ariaLabel="Go to previous video category"
+        />
+        <NavigateBtn
+          linkTo={nextSlug}
+          btnText="Next →"
+          ariaLabel="Go to next video category"
+        />
       </div>
     </main>
   );

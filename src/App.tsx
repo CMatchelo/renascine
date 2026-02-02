@@ -3,6 +3,7 @@ import "./App.css";
 import Layout from "./components/layout";
 import Home from "./pages/home";
 import VideoPage from "./pages/videoPage";
+import AdminVideos from "./pages/AdminVideos";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/:slug" element={<VideoPage />} />
         </Route>
+        <Route path="/adminVideos" element={<AdminVideos />} />
       </Routes>
     </BrowserRouter>
   );
