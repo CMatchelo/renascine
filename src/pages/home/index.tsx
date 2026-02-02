@@ -9,31 +9,31 @@ export default function Home() {
           ariaLabel="Go to Brand Content category"
           title="Brand Content"
           coverUrl="./brandContentCover.png"
-          linkTo="/brandContent"
+          linkTo="/videos/brandContent"
         />
         <ProjectCard
           ariaLabel="Go to Brand Activation category"
           title="Brand Activation"
           coverUrl="./brandActivationCover.png"
-          linkTo="/brandActivation"
+          linkTo="/videos/brandActivation"
         />
         <ProjectCard
           ariaLabel="Go to Episodic category"
           title="Episodic"
           coverUrl="./episodicCover.png"
-          linkTo="/episodic"
+          linkTo="/videos/episodic"
         />
         <ProjectCard
           ariaLabel="Go to Docs category"
           title="Docs"
           coverUrl="./docsCover.png"
-          linkTo="/docs"
+          linkTo="/videos/docs"
         />
         <ProjectCard
           ariaLabel="Go to Music category"
           title="Music"
           coverUrl="./musicCover.png"
-          linkTo="/music"
+          linkTo="/videos/music"
         />
       </div>
       <div className="w-full md:w-1/2 flex flex-col gap-4">
